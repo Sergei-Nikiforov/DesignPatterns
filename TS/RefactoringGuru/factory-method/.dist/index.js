@@ -52,5 +52,5 @@ function creatorExists(creatorName) {
 console.log('App: Launched with the ConcreteCreator1.');
 clientCode(createCreator('ConcreteCreator1'));
 console.log('');
-// console.log('App: Launched with the ConcreteCreator2.');
-// clientCode(createCreator('ConcreteCreator2'));
+console.log('App: Launched with the ConcreteCreator2.');
+clientCode(createCreator('ConcreteCreator2'));
