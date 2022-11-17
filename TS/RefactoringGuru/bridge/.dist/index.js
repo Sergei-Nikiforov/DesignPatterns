@@ -3,6 +3,7 @@ class Abstraction {
     constructor(implementation) {
         this.implementation = implementation;
     }
+    ;
     operation() {
         const result = this.implementation.operationImplementation();
         return `Abstraction: Base operation with:\n${result}`;
