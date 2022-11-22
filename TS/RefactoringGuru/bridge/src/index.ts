@@ -1,5 +1,4 @@
 class Abstraction {
-
     constructor(protected implementation: Implementation) {};
 
     public operation(): string {

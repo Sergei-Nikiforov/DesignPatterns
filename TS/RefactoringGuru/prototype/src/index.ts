@@ -30,6 +30,7 @@ function clientCode() {
     p1.primitive = 245;
     p1.component = new Date();
     p1.circularReference = new ComponentWithBackReference(p1);
+    console.log('p1.circularReference!!', p1.circularReference);
 
     const p2 = p1.clone();
     if (p1.primitive === p2.primitive) {
