@@ -2,6 +2,7 @@
 class Prototype {
     clone() {
         const clone = Object.create(this);
+        console.log('this!!', this);
         clone.component = Object.create(this.component);
         clone.circularReference = Object.assign(Object.assign({}, this.circularReference), { prototype: Object.assign({}, this) });
         return clone;
@@ -17,6 +18,7 @@ function clientCode() {
     p1.primitive = 245;
     p1.component = new Date();
     p1.circularReference = new ComponentWithBackReference(p1);
+    console.log('p1.circularReference!!', p1.circularReference);
     const p2 = p1.clone();
     if (p1.primitive === p2.primitive) {
         console.log('Primitive field values have been carried over to a clone. Yay!');

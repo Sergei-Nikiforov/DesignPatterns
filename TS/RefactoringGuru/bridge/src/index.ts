@@ -1,5 +1,4 @@
 class Abstraction {
-
     constructor(protected implementation: Implementation) {};
 
     public operation(): string {
@@ -43,4 +42,10 @@ console.log('');
 
 implementation = new ConcreteImplementationB();
 abstraction = new Abstraction(implementation);
+clientCode(abstraction);
+
+console.log('');
+
+implementation = new ConcreteImplementationB();
+abstraction = new ExtendedAbstraction(implementation);
 clientCode(abstraction);
