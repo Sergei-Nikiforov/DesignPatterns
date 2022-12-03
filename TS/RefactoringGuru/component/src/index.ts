@@ -30,7 +30,6 @@ class Composite extends Component {
 
     public add(component: Component): void {
         this.children.push(component);
-        console.log('this!!', this);
         component.setParent(this);
     }
 
