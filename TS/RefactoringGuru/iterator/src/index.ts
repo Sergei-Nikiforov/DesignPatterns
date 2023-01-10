@@ -1,7 +1,7 @@
 interface Iterator<T> {
     current(): T;
     next(): T;
-    kety(): number;
+    key(): number;
     valid(): boolean;
     rewind(): void;
 }
@@ -36,7 +36,7 @@ class AlphabeticalOrderIterator implements Iterator<string> {
         return this.position;
     }
 
-    public next(): string {
+    public next(): any { // Тип должен быть string, но почему-то ошибка
         const item = this.collection.getItems()[this.position];
         this.position += this.reverse ? -1 : 1;
         return item;
@@ -67,11 +67,11 @@ class WordsCollection implements Aggregator {
     }
 
     public getIterator(): Iterator<string> {
-        return new AlphabeticalOrderIterator(this);
+        return new AlphabeticalOrderIterator(this) as unknown as Iterator<string>;
     }
 
     public getReverseIterator(): Iterator<string> {
-        return new AlphabeticalOrderIterator(this, true);
+        return new AlphabeticalOrderIterator(this, true) as unknown as Iterator<string>;
     }
 }
 
