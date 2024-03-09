@@ -1,7 +1,7 @@
 // The Interpreter Pattern Concept
 
 interface IAbstractExpression {
-    // All Terminal and Non-Terminal expressions will implement an `interpret` method!
+    // All Terminal and Non-Terminal expressions will implement an `interpret` method
     interpret(): number
 }
 
